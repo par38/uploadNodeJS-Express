@@ -1,0 +1,16 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+
+  //- UN SEUL FICHIER
+  //- form(method="POST" enctype="multipart/form-data" action="uploaddufichier")
+  //-   input(type="file" name="monfichier")
+  //-   button envoyer depuis index.pug
+
+  //- PLUSIEURS FICHIERS - ajouter multiple
+  form(method="POST" enctype="multipart/form-data" action="monupload")
+    input(type="file" name="monfichier" accept=`image/png` multiple)
+    button envoyer plusieurs fichiers
+
